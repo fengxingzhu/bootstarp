@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模态框</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script>
+			$(function(){
+				
+			})
+	</script>
+</head>
+
+<body>
+	
+	<div class="modal fade"  id="mymodal" >
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4>Header
+					<button class="close" data-dismiss="modal"">&times;</button>
+					</h4>
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<div class="form-group">
+							<label>user:</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>email:</label>
+							<input type="text" class="form-control" placeholder="email">	
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default" data-dismiss="modal">取消</button>
+					<button class="btn btn-primary">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+	<br><br>
+		<button class="btn btn-primary" data-toggle="modal" data-target="#mymodal">show</button>
+
+	</div>
+
+	<div id="show">0</div>
+
+	<script>
+	var i=0;
+	function js(a)
+	{
+		i++;
+		if(i>99)
+		return;
+		$('#show').html(i);
+		console.log(i);
+
+	}
+
+	$(function(){
+		
+		setInterval("js(111)",100);
+
+		// $('#mymodal').on('show.bs.modal', function (e) {
+		//   // do something...
+		//   alert(1);
+		// })
+		// $('#mymodal').on('shown.bs.modal', function (e) {
+		//   // do something...
+		//   alert(2);
+		// })
+		// $('#mymodal').on('hide.bs.modal', function (e) {
+		//   // do something...
+		//   alert(3);
+		// })
+
+		// $('#mymodal').on('hidden.bs.modal', function (e) {
+		//   // do something...
+		//   alert(4);
+		// })
+
+		
+	})
+	</script>
+</body>
+</html>
